@@ -13,7 +13,6 @@ public class decimalToBinary5_37 {
         for (int i = decimal; i > 0; i /= 2) {
             binary = (i % 2) + binary;
         }
-        System.out.println(
-                "The binary value of the decimial \"" + decimal + "\" is: " + binary);
+        System.out.println("The binary value of the decimial \"" + decimal + "\" is: " + binary);
     }
 }
