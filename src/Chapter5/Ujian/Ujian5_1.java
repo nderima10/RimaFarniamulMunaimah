@@ -204,9 +204,9 @@ public class Ujian5_1 {
               System.out.println("konversi bilangan heksa ke desimal");
               System.out.print("Masukan bilangan heksa : " );
               String hex = input.next();
-              if (hex.length() != 0) {
+              if (hex.length() != 1) {
                   System.out.println();
-                  System.exit(0);
+                  System.exit(1);
               }
               char ch1 = hex.charAt(0);
               if (ch1 <= 'F' && ch1 >= 'A') {
