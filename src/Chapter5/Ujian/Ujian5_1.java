@@ -24,12 +24,24 @@ public class Ujian5_1 {
         int MENU = input.nextInt();
 
         switch (MENU) {
-//            case 1 :
-//                System.out.println("konversi bilangan biner ke oktal");
-//                System.out.print("Masukan bilangan biner : ");
-//
-//                System.out.println("Konversi bilangan oktalnya adalah : ");
-//                break;
+            case 1:
+                System.out.println("konversi bilangan biner ke oktal");
+                System.out.print("Masukan bilangan biner : ");
+                long biner = input.nextLong();
+                int oktal = 0, desimal = 0, a = 0;
+                while (biner != 0) {
+                    desimal += (biner % 10) * Math.pow(2, a);
+                    a++;
+                    biner /= 10;
+                }
+                a = 1;
+                while (desimal != 0) {
+                    oktal += (desimal % 8) * a;
+                    desimal /= 8;
+                    a *= 10;
+                }
+                System.out.println("Konversi bilangan oktalnya adalah : " + oktal);
+                break;
             case 2:
                 System.out.println("konversi bilangan biner ke desimal");
                 System.out.print("Masukan bilangan biner : ");
@@ -51,55 +63,66 @@ public class Ujian5_1 {
                 String hexa = Integer.toHexString(biner3);
                 System.out.println("Bilangan Hexadecimalnya adalah: " + hexa);
                 break;
-//            case 4 :
-//                System.out.println("konversi bilangan oktal ke biner");
-//                System.out.print("Masukan bilangan oktal : ");
-//                int oktal1 = input.nextInt();
-//
-//                String biner4 = "";
-//                for (int i = oktal1; i > 2; i /= 8) {
-//                    biner4 = (i % 8) + biner4;
-//                }
-//                System.out.println("konversi bilangan binernya adalah : " + biner4);
-//                break;
-//            case 5 :
-//                System.out.println("konversi bilangan oktal ke desimal");
-//                System.out.print("Masukan bilangan oktal : ");
-//                int oktal5 = input.nextInt();
-//
-//                String desimal = "";
-//                for (int i = oktal5; i > 8; i /= 10) {
-//                    desimal = i % 10 + desimal;
-//                }
-//                System.out.println("Konversi bilangan desimalnya adalah : " + desimal);
-//                break;
-//            case 6 :
-//                System.out.println("konversi bilangan oktal ke heksa");
-//                int num2;
-//                Scanner scan2 = new Scanner(System.in);
-//                System.out.print("Masukan bilangan oktal : ");
-//                num2 = Integer.parseInt(scan2.nextLine(), 8);
-//                String hexa2 = Integer.toHexString(num2);
-//                System.out.println("Bilangan Hexanya adalah: " + hexa2);
-//                break;
+            case 4:
+                System.out.println("konversi bilangan oktal ke biner");
+                System.out.print("Masukan bilangan oktal : ");
+                long oktal3 = input.nextLong();
+                int biner4 = 0, desimal4 = 0, w = 0;
+                while (oktal3 != 0) {
+                    desimal4 += (oktal3 % 10) * Math.pow(8, w);
+                    w++;
+                    oktal3 /= 10;
+                }
+                w = 1;
+                while (desimal4 != 0) {
+                    biner4 += (desimal4 % 2) * w;
+                    desimal4 /= 2;
+                    w *= 10;
+                }
+                System.out.println("Konversi bilangan oktalnya adalah : " + biner4);
+                break;
+            case 5:
+                System.out.println("konversi bilangan oktal ke desimal");
+                System.out.print("Masukan bilangan oktal : ");
+                int oktal5 = input.nextInt();
+                int result = 0;
+                int copy_oktal = oktal5;
+                for (int d = 0; copy_oktal > 0; d++) {
+                    int temp = copy_oktal % 10;
+                    double p = Math.pow(8, d);
+                    result += (temp * p);
+                    copy_oktal = copy_oktal / 10;
+                }
+                System.out.print("Konversi desimalnya adalah : " + result);
+                break;
+            case 6:
+                System.out.println("konversi bilangan oktal ke heksa");
+                int oktal0;
+                Scanner in = new Scanner(System.in);
+                System.out.print("Masukan bilangan oktal : ");
+
+                oktal0 = Integer.parseInt(in.nextLine(), 8);
+                String hexa1 = Integer.toHexString(oktal0);
+                System.out.println("Bilangan Hexadecimalnya adalah: " + hexa1);
+                break;
             case 7:
                 System.out.println("konversi bilangan desimal ke biner");
                 System.out.print("Masukan bilangan desimal : ");
-                int desimal = input.nextInt();
+                int desimal3 = input.nextInt();
 
-                String biner = "";
-                for (i = desimal; i > 0; i /= 2) {
-                    biner = (i % 2) + biner;
+                String biner2 = "";
+                for (i = desimal3; i > 0; i /= 2) {
+                    biner2 = (i % 2) + biner2;
                 }
-                System.out.println("konversi bilangan binernya adalah : " + biner);
+                System.out.println("konversi bilangan binernya adalah : " + biner2);
                 break;
             case 8:
                 System.out.println("konversi bilangan desimal ke oktal");
                 System.out.print("Masukan bilangan desimal : ");
-                int decimal = input.nextInt();
+                int decimal2 = input.nextInt();
 
                 String oktali = "";
-                for (i = decimal; i > 0; i /= 8) {
+                for (i = decimal2; i > 0; i /= 8) {
                     oktali = i % 8 + oktali;
                 }
                 System.out.println("konversi bilangan oktalnya adalah : " + oktali);
@@ -113,27 +136,92 @@ public class Ujian5_1 {
                 String hexa3 = Integer.toHexString(num3);
                 System.out.println("Bilangan Hexanya adalah: " + hexa3);
                 break;
-////            case 10 :
-////                System.out.println("konversi bilangan heksa ke biner");
-////                System.out.print("Masukan bilangan heksa : ");
-////                String heksa = input.nextLine();
-////                int nilaiBiner = Integer.
-//            case 11:
-//                System.out.println("konversi bilangan heksa ke oktal");
-//                System.out.print("Masukan bilangan heksa : ");
-//
-//                System.out.println("Konversi bilangan oktalnya adalah : ");
-//                break;
-//            case 12 :
-//                System.out.println("konversi bilangan heksa ke desimal");
-//                System.out.print("Masukan bilangan heksa : ");
-//                int heksa1 = input.nextInt();
-//                String desimal = "";
-//                for (int i = heksa1; i > 16; i /= 10) {
-//                    desimal = 0.i % 10 + desimal;
-//                }
-//                System.out.println("Konversi bilangannya adalah : " + desimal);
+            case 10:
+                System.out.println("konversi bilangan heksa ke biner");
+                int d = 0, len;
+                String hexadecimal;
+                Scanner s = new Scanner(System.in);
+                System.out.print("Masukan bilangan heksa : ");
+                hexadecimal = s.nextLine();
+                len = hexadecimal.length();
+                char[] hexDigit = hexadecimal.toCharArray();
+                while (d < len) {
+                    switch (hexDigit[d]) {
+                        case '0' -> System.out.print("Konversi bilangan binernya adalah : 0000");
+                        case '1' -> System.out.print("Konversi bilangan binernya adalah : 0001");
+                        case '2' -> System.out.print("Konversi bilangan binernya adalah : 0010");
+                        case '3' -> System.out.print("Konversi bilangan binernya adalah : 0011");
+                        case '4' -> System.out.print("Konversi bilangan binernya adalah : 0100");
+                        case '5' -> System.out.print("Konversi bilangan binernya adalah : 0101");
+                        case '6' -> System.out.print("Konversi bilangan binernya adalah : 0110");
+                        case '7' -> System.out.print("Konversi bilangan binernya adalah : 0111");
+                        case '8' -> System.out.print("Konversi bilangan binernya adalah : 1000");
+                        case '9' -> System.out.print("Konversi bilangan binernya adalah : 1001");
+                        case 'a', 'A' -> System.out.print("Konversi bilangan binernya adalah : 1010");
+                        case 'b', 'B' -> System.out.print("Konversi bilangan binernya adalah : 1011");
+                        case 'c', 'C' -> System.out.print("Konversi bilangan binernya adalah : 1100");
+                        case 'd', 'D' -> System.out.print("Konversi bilangan binernya adalah : 1101");
+                        case 'e', 'E' -> System.out.print("Konversi bilangan binernya adalah : 1110");
+                        case 'f', 'F' -> System.out.print("Konversi bilangan binernya adalah : 1111");
+                        default -> System.out.println("\nBilangan hexa tidak tersedia!");
+                    }
+                    d++;
+                }
+                break;
+            case 11:
+                System.out.println("konversi bilangan heksa ke oktal");
+                int b = 0, oct;
+                String hexadecimal1;
+                Scanner f = new Scanner(System.in);
+                System.out.print("Masukan bilangan heksa : ");
+                hexadecimal1 = f.nextLine();
+                oct = hexadecimal1.length();
+                char[] hexDigit1 = hexadecimal1.toCharArray();
+                while (b < oct) {
+                    switch (hexDigit1[b]) {
+                        case '0' -> System.out.print("Konversi bilangan oktalnya adalah : 0");
+                        case '1' -> System.out.print("Konversi bilangan oktalnya adalah : 1");
+                        case '2' -> System.out.print("Konversi bilangan oktalnya adalah : 2");
+                        case '3' -> System.out.print("Konversi bilangan oktalnya adalah : 3");
+                        case '4' -> System.out.print("Konversi bilangan oktalnya adalah : 4");
+                        case '5' -> System.out.print("Konversi bilangan oktalnya adalah : 5");
+                        case '6' -> System.out.print("Konversi bilangan oktalnya adalah : 6");
+                        case '7' -> System.out.print("Konversi bilangan oktalnya adalah : 7");
+                        case '8' -> System.out.print("Konversi bilangan oktalnya adalah : 10");
+                        case '9' -> System.out.print("Konversi bilangan oktalnya adalah : 11");
+                        case 'a', 'A' -> System.out.print("Konversi bilangan oktalnya adalah : 12");
+                        case 'b', 'B' -> System.out.print("Konversi bilangan oktalnya adalah : 13");
+                        case 'c', 'C' -> System.out.print("Konversi bilangan oktalnya adalah : 14");
+                        case 'd', 'D' -> System.out.print("Konversi bilangan oktalnya adalah : 15");
+                        case 'e', 'E' -> System.out.print("Konversi bilangan oktalnya adalah : 16");
+                        case 'f', 'F' -> System.out.print("Konversi bilangan oktalnya adalah : 17");
+                        default -> System.out.println("\nBilangan hexa tidak tersedia!");
+                    }
+                    b++;
+                }
+                break;
+          case 12 :
+              System.out.println("konversi bilangan heksa ke desimal");
+              System.out.print("Masukan bilangan heksa : " );
+              String hex = input.next();
+              if (hex.length() != 1) {
+                  System.out.println();
+                  System.exit(1);
+              }
+              char ch1 = hex.charAt(0);
+              if (ch1 <= 'F' && ch1 >= 'A') {
+                  int v = ch1 - 'A' + 10;
+                  System.out.println("Kinversi bilangan desimalnya" + ch1 + " adalah " + v);
+              } else if (Character.isDigit(ch1)) {
+                  System.out.println("Kinversi bilangan desimalnya " + ch1 + " adalah " + ch1);
+              }
+              else {
+                  System.out.println("Bilangan hexa tidak tersedia");break;
+              }
         }
     }
 }
+
+
+
 
