@@ -1,5 +1,4 @@
 package Chapter6_Methods.Exercise;
-
 public class Listing9_TestMethodOverloading {
     public static void main(String[] args) {
         System.out.println("Maksimum 3 dan 4 adalah " + max (3,4));

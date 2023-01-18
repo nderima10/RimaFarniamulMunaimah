@@ -1,4 +1,5 @@
 package Chapter6_Methods.Exercise;
+
 public class Listing11_TestRandomCharacter {
     public static void main(String[] args) {
         final int NUMBER_OF_CHARS = 175;
@@ -10,6 +11,6 @@ public class Listing11_TestRandomCharacter {
                 System.out.println(ch);
             else
                 System.out.print(ch);
-            }
+        }
     }
 }
