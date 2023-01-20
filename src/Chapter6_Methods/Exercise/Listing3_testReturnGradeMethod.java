@@ -2,8 +2,8 @@ package Chapter6_Methods.Exercise;
 
 public class Listing3_testReturnGradeMethod {
     public static void main(String[] args) {
-        System.out.println("the grade is " + getGrade(78.5));
-        System.out.println("tghe grade is " + getGrade(59.5));
+        System.out.println("the grade is " + getGrade(70.5));
+        System.out.println("the grade is " + getGrade(60.5));
     }
     public static char getGrade (double score) {
         if (score >= 90.0)
@@ -16,6 +16,5 @@ public class Listing3_testReturnGradeMethod {
             return 'D';
         else
             return 'F';
-
     }
 }
