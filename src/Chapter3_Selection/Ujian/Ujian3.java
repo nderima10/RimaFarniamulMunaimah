@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ujian3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double penjualan =0, komisi =0, jasa =0, pendapatan=0;
+        double penjualan, komisi =0, jasa =0, pendapatan;
 
         System.out.print("Nama sales : ");
         String nama = input.nextLine();

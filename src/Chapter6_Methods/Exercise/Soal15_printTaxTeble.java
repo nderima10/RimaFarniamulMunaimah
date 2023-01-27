@@ -20,8 +20,6 @@ public class Soal15_printTaxTeble {
             System.out.printf("%-10d\n", Math.round(computeTax(3, taxableIncome)));
         }
     }
-
-    /** Method computeTax */
     public static double computeTax(int status, double taxableIncome) {
         double tax,
                 taxRate,

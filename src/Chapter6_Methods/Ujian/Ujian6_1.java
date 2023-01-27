@@ -1,6 +1,6 @@
 package Chapter6_Methods.Ujian;
 
-public class Ujian6_1 {
+public class  Ujian6_1 {
     public static void main(String[] args) {
         System.out.println(
                 """
