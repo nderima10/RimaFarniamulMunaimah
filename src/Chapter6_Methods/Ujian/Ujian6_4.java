@@ -9,15 +9,16 @@ public class Ujian6_4 {
         System.out.println("Slip Gaji karyawan Bulan Februari 2023");
         System.out.println("-------------------------------------------------------------------------------------");
         System.out.println("Nama karyawan      : Nde Rima");
-        System.out.println("Status             : Belum Menikah");
+        System.out.println("Status             : ");
+//        double status = input.nextDouble();
         System.out.print("Jumlah anak        : ");
         double anak = input.nextDouble();
-//        System.out.println("Jarak rumah kantor : ");
-//        String jarak = input.nextLine();
-//        System.out.println("Jumlah masuk kerja : ");
-//        double jumlah = input.nextDouble();
-//        System.out.println("Tahun masuk        : ");
-//        double tahun = input.nextDouble();
+        System.out.print("Jarak rumah - kantor : ");
+        String jarak = String.valueOf(input.nextDouble());
+        System.out.print("Jumlah masuk kerja : ");
+        double jumlah = input.nextDouble();
+        System.out.print("Tahun masuk        : ");
+        double tahun = input.nextDouble();
 
 
         System.out.println("-------------------------------------------------------------------------------------");
@@ -25,26 +26,44 @@ public class Ujian6_4 {
                 """
                         Gaji pokok      |     T. Keluarga     |      T. Transportasi      |     T. Kesehatan    \s
                         -------------------------------------------------------------------------------------""");
-         System.out.println(tKeluarga(anak)); 
+         System.out.println(tKeluarga(anak));
+         double gaji;
+         gaji = 0;
+        System.out.println(totalGaji(gaji, Double.parseDouble(jarak), jumlah, tahun));
+//        System.out.println(tTransfortasi(jarak,jumlah));
     }
 
-    public static boolean tKeluarga(double anak) {
-        double gajiPokok = 10.000000;
-        
-        System.out.printf("%4.6f", gajiPokok);
+    public static char tKeluarga(double anak) {
+        double gajiPokok = 10000000;
+        System.out.printf("%4.2f", gajiPokok);
         System.out.print("       |        ");
         if (anak == 0)
-            System.out.printf("%4.3f",    gajiPokok * 0.50);
+            System.out.printf("%4.2f",    gajiPokok * 0.50);
          else if (anak <= 3)
-            System.out.printf("%4.6f",    gajiPokok * 0.075);
+            System.out.printf("%4.2f",    gajiPokok * 0.075);
          else if (anak >= 3)
-            System.out.printf("%4.1f",    gajiPokok * 0.010);
+            System.out.printf("%4.2f",    gajiPokok * 0.010);
          else
             System.out.print(gajiPokok);
-         System.out.print("     |     ");
-
-        return false;
+         System.out.println("     |     ");
+        System.out.println("-------------------------------------------------------------------------------------");
+        return 0;
     }
+//    public static boolean tTransfortasi(double jarak, double jumlah) {
+//        for (jarak <=5; jumlah == 0;)
+//            if (jarak <= jumlah) {
+//                System.out.println("5000");
+//        } else if () {
+//
+//            }
+    public static double totalGaji (double gaji, double tK, double tTr, double tks) {
+        double j = gaji +  tK + tTr + tks;
+        System.out.println("Total Gaji Bulan Februari : " + gaji + tK + tTr + tks);
+        System.out.println("-------------------------------------------------------------------------------------");
+        return j;
+
+    }
+
 }
 
 //    public static boolean tTransfortasi (String jarak, ) {
