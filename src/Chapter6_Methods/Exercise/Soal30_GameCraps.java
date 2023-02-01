@@ -13,6 +13,7 @@ public class Soal30_GameCraps {
     }
 
     public static int rollDice() {
+
         return (int) (1 + Math.random() * 6);
     }
 
@@ -38,6 +39,7 @@ public class Soal30_GameCraps {
             System.out.println("you win");
     }
     public static boolean isnaturalOrCraps(int result) {
+
         return result == 0 || result == 1;
     }
     public static void rollTillWinOrLose(int point) {

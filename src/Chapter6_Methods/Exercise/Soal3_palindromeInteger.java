@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class Soal3_palindromeInteger {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Masukan angka: ");
+        System.out.print("Masukan bilangan: ");
         int angka = input.nextInt();
         System.out.println(angka + (isPalindrome(angka) ? " is " : " is not ") + " a palindrome.");
     }
     public static  boolean isPalindrome (int angka) {
-        return angka == revers(angka) ? true : false;
+
+        return angka == revers(angka);
     }
     public static int revers (int angka) {
         String reverse = " ";
