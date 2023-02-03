@@ -62,13 +62,9 @@ public class Ujian6_2 {
     public static int Limas(int T, int LuasAlas) {
         return (int) (0.3 * LuasAlas * T);
     }
-
     public static int Prisma(int P, int L, int T) {
         return (int) (0.5 * (P * L * T));
     }
-
-    public static int Tabung(int r, int T) {
-        return (int) (3.14 * Math.pow(r, 2) * T);
-
+    public static int Tabung(int r, int T) {return (int) (3.14 * Math.pow(r, 2) * T);
     }
 }

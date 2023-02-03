@@ -5,11 +5,23 @@ import java.util.Scanner;
 public class Ujian6_3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("konversi bilangan heksa ke desimal");
-        System.out.print("Masukan bilangan heksa : ");
-        String hex = input.next();
+        System.out.println("Mengkonversi bilangan Biner ");
+        System.out.println("=============== Menu ===============\n");
+        System.out.println("1. Konversi bilangan biner ke oktal");
+        System.out.println("2. Konversi bilangan biner ke desimal");
+        System.out.println("3. Konversi bilangan biner ke heksa");
+        System.out.println("4. Konversi bilangan oktal ke biner");
+        System.out.println("5. Konversi bilangan oktal ke desimal");
+        System.out.println("6. Konversi bilangan oktal ke heksa");
+        System.out.println("7. Konversi bilangan desimal ke biner");
+        System.out.println("8. Konversi bilangan desimal ke oktal");
+        System.out.println("9. Konversi bilangan desimal ke heksa");
+        System.out.println("10. Konversi bilangan heksa ke biner");
+        System.out.println("11. Konversi bilangan heksa ke oktal");
+        System.out.println("12. Konversi bilangan heksa ke desimal");
 
-        System.out.println(konversiHtoD(Integer.parseInt(hex)));
+        System.out.print("Masukan nomor MENU : ");
+        int MENU = input.nextInt();
     }
 
     public static double konversiHtoD(int hex) {
