@@ -48,9 +48,9 @@ public class Ujian6_4 {
         System.out.println("Tahun masuk          : " + tahunMasuk);
         System.out.println(" ");
         System.out.println("----------------------------------------------------------------------");
-        System.out.println("\tGajih Pokok\t|\tT.Keluarga\t|\tT.Transport\t|\tT.Kesehatan\t|\t");
+        System.out.println("Gajih Pokok\t|\tT.Keluarga\t|\tT.Transport\t|\tT.Kesehatan\t|\t");
         System.out.println("----------------------------------------------------------------------");
-        System.out.printf("\t%,d\t|\t\t%,d\t\t|\t%,d\t\t|\t%,d\t\t|\n", gajiPokok, tunjanganKeluarga,tunjanganTransfortasi,tunjanganKesehatan);
+        System.out.printf("%,d\t|\t%,d\t\t|\t%,d\t\t|\t%,d\t\t|\n", gajiPokok, tunjanganKeluarga,tunjanganTransfortasi,tunjanganKesehatan);
         System.out.println(" ");
         System.out.println("Total Gaji Bulan " + bulan + " " + totalGaji);
     }
@@ -58,23 +58,24 @@ public class Ujian6_4 {
         double tKel = 0;
         status = status.toLowerCase();
 
-        if ("Menikah".equals(status) && anak == 0) {
+        if (status.equals("menikah") && anak == 0 ) {
             tKel = gajiPokok * 0.05;
-        } else if ("Menikah".equals(status) && anak <= 3) {
+        } else if (status.equals("menikah") && anak <= 3) {
             tKel = gajiPokok * 0.075;
-        } else if ("Menikah".equals(status)) {
-            tKel = gajiPokok * 0.010;
-        } else if ("Duda" .equals(status) && anak > 0) {
+        } else if (status.equals("menikah")) {
+            tKel = gajiPokok * 0.1;
+        } else if (status.equals("duda") & anak > 0) {
             tKel = gajiPokok * 0.05;
-        } else if ("Janda".equals(status) && anak > 0) {
-            tKel = gajiPokok * 0.075;
-        } else if ("Duda".equals(status) && anak == 0) {
+        } else if (status.equals("duda") && anak == 0) {
             tKel = gajiPokok * 0.03;
-        } else if ("Janda".equals(status) && anak == 0) {
+        } else if (status.equals("janda") && anak > 0) {
+            tKel = gajiPokok * 0.075;
+        } else if (status.equals("janda") && anak == 0) {
             tKel = gajiPokok * 0.05;
         } else {
-            System.out.print("Error");
+            System.out.println("error");
         }
+
         return (int) tKel;
     }
     private static int tTransfortasi (int jumlah, int jarak) {

@@ -1,6 +1,6 @@
 package Chapter5_Loops.Latihan;
 
-public class listing12_testBreak {
+public class Listing12_testBreak {
         public static void main(String[] args) {
           int sum = 0;
           int number = 0;
