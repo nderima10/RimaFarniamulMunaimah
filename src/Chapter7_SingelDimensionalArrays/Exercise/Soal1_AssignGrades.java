@@ -3,49 +3,44 @@ package Chapter7_SingelDimensionalArrays.Exercise;
 import java.util.Scanner;
 
 public class Soal1_AssignGrades {
-    static final int PERMULAAN = 4;
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Masukan Nomor Siswa : ");
-        int nomorSiswa = input.nextInt();
-        System.out.print("Masukan " + nomorSiswa + " Score : ");
 
-        int[][] siswa = new int[3][nomorSiswa + PERMULAAN];
-
-        for (int i = 0; i < nomorSiswa; i++) {
-            siswa[0][i] = input.nextInt();
+        System.out.print("Enter the nubmer of students: ");
+        int[] scores = new int[input.nextInt()];
+        char[] grades = new char[scores.length];
+        System.out.print("Enter " + scores.length + " scores: ");
+        for (int i = 0; i < scores.length; i++) {
+            scores[i] = input.nextInt();
         }
-        int skorTerbaik = getBestScore(siswa);
-        mengaturRentangKelas(siswa,skorTerbaik);
-
-        for (int i = 0; i < siswa[0].length - PERMULAAN; i++) {
-            char grade = getStudentGrade(siswa, i);
-            System.out.println("Siswa " + i + " skornya adalah " + siswa[0][i] + " dan nilainya adalah " + grade );
+        getGrades(scores, grades);
+        for (int i = 0; i < scores.length; i++) {
+            System.out.println("Student " + i + " score is " +
+                    scores[i] + " and grade is " + grades[i]);
         }
     }
-    public static int getBestScore(int [][] siswa) {
-        int skorTerbaik =siswa[0][0];
-        for (int i : siswa[0]) {
-            if (i > skorTerbaik){
-                skorTerbaik = i;
-            }
+    public static int max(int[] array) {
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max)
+                max = array[i];
         }
-        return skorTerbaik;
+        return max;
     }
-    public static void mengaturRentangKelas (int[][] siswa, int skorTerbaik) {
-        for (int i = 0; i < 4; i++) {
-            siswa[1][i] = skorTerbaik - (10 * (i + 1));
-            siswa[2][i] = ('A' + i);
+
+    public static void getGrades(int[] scores, char[] grades) {
+        int best = max(scores);
+        for (int i = 0; i < scores.length; i++) {
+            if (scores[i] >= best - 10)
+                grades[i] = 'A';
+            else if (scores[i] >= best - 20)
+                grades[i] = 'B';
+            else if (scores[i] >= best - 30)
+                grades[i] = 'C';
+            else if (scores[i] >= best - 40)
+                grades[i] = 'D';
+            else
+                grades[i] = 'F';
         }
-    }
-    public static char getStudentGrade (int[][] siswa, int index) {
-        int nilai = siswa[0][index];
-        for (int i = 0; i < 4; i++) {
-            if (nilai >= siswa[1][i]) {
-                return (char)siswa[2][i];
-            }
-        }
-        return 'F';
     }
 }

@@ -12,8 +12,8 @@ public class Listing7_BinarySearch {
             else if (key == list[mid])
                 return mid;
             else
-                low = mid + 1;
-        }
+            low = mid + 1;
+            }
         return -low - 1;
     }
 }

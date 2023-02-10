@@ -3,41 +3,39 @@ package Chapter7_SingelDimensionalArrays.Exercise;
 import java.util.Scanner;
 
 public class Soal15_EliminateDuplicates {
-//    static final int SIZE= 10;
-//
-//    public static void main(String[] args) {
-//        double[] number = new double[SIZE];
-//        Scanner input = new Scanner(System.in);
-//        System.out.print("Masukan " + SIZE + " nomor : ");
-//        for (int i = 0; i < number.length; i++)
-//            number[i] = input.nextDouble();
-//        printArray(eliminateDuplicates(number), 10);
-//    }
-//    public static int[] eliminateDuplicates(int[] list) {
-//        int[] temp = new int[list.length];
-//        int temptIndex = 0;
-//        for (int i = 0; i < list.length; i++) {
-//            boolean isDuplicate = false;
-//            for (int k = 0; k < list.length; k++) {
-//                if (temp[k] == list[i]) {
-//                    isDuplicate = true;
-//                }
-//            }
-//            if (!isDuplicate) {
-//                temp[temptIndex++] = list[i];
-//            }
-//        }
-//        int[] trimedArray = new int[temptIndex];
-//        for (int i = 0; i < temptIndex; i++) {
-//            trimedArray[i] = temp[i];
-//        }
-//        return trimedArray;
-//    }
-//    public static void printArray(int[] array, int numberPerLine) {
-//        for (int i = 0; i < array.length; i++) {
-//            System.out.printf("%2d", array[i]);
-//            if ((i + 1) % numberPerLine == 0)
-//                System.out.printf(" ");
-//        }
-//    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] numbers = new int[10];
+
+        System.out.print("Enter ten number: ");
+        for (int i = 0; i < numbers.length; i++)
+            numbers[i] = input.nextInt();
+
+        int[] distinctNumbers = eliminateDuplicates(numbers);
+
+        System.out.print("The distinct numbers are:");
+        for (int e: distinctNumbers) {
+            if (e > 0)
+                System.out.print(" " + e);
+        }
+        System.out.println();
+    }
+    public static int[] eliminateDuplicates(int[] list) {
+        int[] distinctList = new int[list.length];
+        int i = 0;
+        for (int e: list) {
+            if (linearSearch(distinctList, e) == -1) {
+                distinctList[i] = e;
+                i++;
+            }
+        }
+        return distinctList;
+    }
+    public static int linearSearch(int[] array, int key) {
+        for (int i = 0; i < array.length; i++) {
+            if (key == array[i])
+                return i;
+        }
+        return -1;
+    }
 }
