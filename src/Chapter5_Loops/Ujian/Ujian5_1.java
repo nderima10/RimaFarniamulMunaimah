@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Ujian5_1 {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         System.out.println("Mengkonversi bilangan Biner ");
         System.out.println("------------Menu------------\n");
