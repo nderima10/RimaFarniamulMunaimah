@@ -30,17 +30,17 @@ public class Listing6_GuessBirthdayUsingArray {
                  {28, 29, 30, 31}}};
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++){
-            System.out.println("Is your birthday in set" + (i + 1) + "?");
+            System.out.println("Apakah ulang tahunmu sudah diatur" + (i + 1) + "?");
             for (int k = 0; k < 4; k++)
                 for (int j = 0 ; j < 4; j++) {
                 System.out.printf("%4d", dates[i][j][k]);
                 System.out.println();
             }
-            System.out.print("\n enter 0 for No and 1 for yes: ");
+            System.out.print("\n masukkan 0 untuk Tidak dan 1 untuk ya : ");
             answer = input.nextInt();
             if (answer == 1)
                 day += dates[i][0][0];
         }
-        System.out.println("your birthday is " + day);
+        System.out.println(" ulang tahunmu " + day);
     }
 }

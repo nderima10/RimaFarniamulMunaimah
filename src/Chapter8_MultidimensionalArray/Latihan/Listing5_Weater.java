@@ -23,8 +23,8 @@ public class Listing5_Weater {
                 dailytemperatureTotal += data[i][j][0];
                 dailyHumidityTotal += data[i][j][1];
             }
-            System.out.println("Day " + i + "'s average temperature is " + dailytemperatureTotal / NUMBER_OF_YEARS);
-            System.out.println("Day " + i + "'s average humidity is " + dailyHumidityTotal / NUMBER_OF_YEARS);
+            System.out.println("Hari " + i + " suhu rata-rata adalah " + dailytemperatureTotal / NUMBER_OF_YEARS);
+            System.out.println("Hari " + i + " kelembaban rata-rata adalah " + dailyHumidityTotal / NUMBER_OF_YEARS);
         }
     }
 }

@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Listing4_CheckSudokuSolutions {
     public static void main(String[] args) {
         int[][] grid = readASolution();
-        System.out.print(isValid(grid) ? " valid solution " : "Invalid solution");
+        System.out.print(isValid(grid) ? " solusi valid "  : "Solusi tidak valid");
     }
 
     public static int[][] readASolution() {
         Scanner input = new Scanner(System
                 .in);
-        System.out.println("Enter a sudoku puzzle solution: ");
+        System.out.println("Masukkan solusi teka-teki sudoku : ");
         int[][] grid = new int[9][9];
         for (int i = 0; i < 9; i++)
             for (int j = 0; j < 9; j++)

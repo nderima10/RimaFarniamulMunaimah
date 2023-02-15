@@ -18,7 +18,7 @@ public class Listing2_GradeExam {
                 if (answers[i][j] == keys[j])
                     correnCount++;
             }
-            System.out.println("Student " + i + " s corect count is " + correnCount);
+            System.out.println("Siswa " + i + " hitungan yang benar adalah " + correnCount);
         }
     }
 }

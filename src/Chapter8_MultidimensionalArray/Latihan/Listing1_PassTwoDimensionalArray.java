@@ -6,7 +6,7 @@ public class Listing1_PassTwoDimensionalArray {
     public static void main(String[] args) {
         int[][] m = getArray();
 
-        System.out.println("Sum of all elements is " +sum(m));
+        System.out.println("Jumlah semua elemen adalah " +sum(m));
     }
     public static int[][] getArray() {
         Scanner input = new Scanner(System.in);
