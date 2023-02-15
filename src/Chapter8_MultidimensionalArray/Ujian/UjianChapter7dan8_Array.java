@@ -2,7 +2,7 @@ package Chapter8_MultidimensionalArray.Ujian;
 
 import java.util.Scanner;
 
-public class UjianVersi2 {
+public class UjianChapter7dan8_Array {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Program Aplikasi Rekap Nilai ");
