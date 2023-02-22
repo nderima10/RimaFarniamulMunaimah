@@ -2,8 +2,10 @@ package Chapter11_InheritanceAndPolymorphism.Latihan;
 
 public class Listing7_CastingDemo {
     public static void main(String[] args) {
-        Object object1 = new Listing2_CircleFromSimpleGeometricObject(1);
-        Object object2 = new Listing3_rectangFromsimpleGeometriObject(1, 1);
+        Object object1 = new
+                Listing2_CircleFromSimpleGeometricObject(1);
+        Object object2 = new
+                Listing3_rectangFromsimpleGeometriObject(1, 1);
         displayObject(object1);
         displayObject(object2);
         }
