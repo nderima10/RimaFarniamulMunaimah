@@ -2,7 +2,7 @@ package Chapter9_Object_And_Class.Latihan;
 
 public class Listing7_TestCircleWithStaticMembers {
     public static void main(String[] args) {
-        System.out.println("Before creatiing object");
+        System.out.println("Before creating object");
         System.out.println("The number of circle object is " + Listing6_CircleWithStaticMembers.numberOfObject);
 
         Listing6_CircleWithStaticMembers c1 = new Listing6_CircleWithStaticMembers();

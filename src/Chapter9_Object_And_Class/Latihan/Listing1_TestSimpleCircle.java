@@ -36,7 +36,7 @@ class SimpleCircle {
     double getPerimeter() {
         return 2 * radius * Math.PI;
     }
-    void setRedius(double newRadius) {
+    void setRadius(double newRadius) {
         radius = newRadius;
     }
 }
