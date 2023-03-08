@@ -18,7 +18,7 @@ public class Listing6_TestCalender {
         System.out.println("DAY_OF_WEEK " + calendar.get(Calendar.DAY_OF_WEEK));
         System.out.println("DAY_OF_MONTH: " + calendar.get(Calendar.DAY_OF_MONTH));
         System.out.println("DAY_OF_YEAR: " + calendar.get(Calendar.DAY_OF_YEAR));
-        System.out.println("WEEK_OFMONTH: " + calendar.get(Calendar.WEEK_OF_MONTH));
+        System.out.println("WEEK_OF_MONTH: " + calendar.get(Calendar.WEEK_OF_MONTH));
         System.out.println("WEEK_OF_YEAR: " + calendar.get(Calendar.WEEK_OF_YEAR));
         System.out.println("AM_PM: " + calendar.get(Calendar.AM_PM));
 

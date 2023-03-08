@@ -1,0 +1,33 @@
+package Chapter10_ObjectOrientedThingking.Exercise;
+
+public class Soal10b {
+    private int[] elements;
+    private int size;
+    public static final int DEFAULT_CAPACITY = 8;
+
+    Soal10b() {
+        elements = new int[DEFAULT_CAPACITY];
+    }
+    public void enqueue(int v) {
+        if (size >= elements.length) {
+            int[] temp = new int[elements.length * 2];
+            System.arraycopy(elements, 0, temp, 0, elements.length);
+            elements = temp;
+        }
+        elements[size++] = v;
+    }
+    public int dequeue(){
+        int v = elements[0];
+        int[] temp = new int[elements.length];
+        System.arraycopy(elements, 0, temp, 0, size);
+        elements = temp;
+        size--;
+        return v;
+    }
+    public boolean empty() {
+        return size == 0;
+    }
+    public int getSize() {
+        return size;
+    }
+}

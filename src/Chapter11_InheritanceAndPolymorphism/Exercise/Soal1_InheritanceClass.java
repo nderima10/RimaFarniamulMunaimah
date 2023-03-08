@@ -17,7 +17,7 @@ public class Soal1_InheritanceClass {
         System.out.print("Is the triangle filled (true / false)? ");
         boolean filled = input.nextBoolean();
 
-        Triangle triangle = new Triangle(side1, side2, side3);
+        Soal1b_Triangle triangle = new Soal1b_Triangle(side1, side2, side3);
         triangle.setColor(color);
         triangle.setFilled(filled);
 

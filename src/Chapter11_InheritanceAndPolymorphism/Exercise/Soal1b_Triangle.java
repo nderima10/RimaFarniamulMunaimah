@@ -1,15 +1,15 @@
 package Chapter11_InheritanceAndPolymorphism.Exercise;
 
-public class Triangle
-        extends ExerciseGeometricObject {
+public class Soal1b_Triangle
+        extends Soal1b_GeometricObject {
     private double side1;
     private double side2;
     private double side3;
 
-    Triangle() {
+    Soal1b_Triangle() {
         side1 = side2 = side3 = 1.0;
     }
-    Triangle(double side1, double side2, double side3) {
+    Soal1b_Triangle(double side1, double side2, double side3) {
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;

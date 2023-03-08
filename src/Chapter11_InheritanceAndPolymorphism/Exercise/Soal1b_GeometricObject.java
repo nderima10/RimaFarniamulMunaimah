@@ -1,13 +1,13 @@
 package Chapter11_InheritanceAndPolymorphism.Exercise;
 
-public class ExerciseGeometricObject {
+public class Soal1b_GeometricObject {
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
-    public ExerciseGeometricObject() {
+    public Soal1b_GeometricObject() {
         dateCreated = new java.util.Date();
     }
-    public ExerciseGeometricObject(String color, boolean filled) {
+    public Soal1b_GeometricObject(String color, boolean filled) {
         dateCreated = new java.util.Date();
         this.color = color;
         this.filled = filled;
