@@ -6,8 +6,8 @@ public class Soal1b_Triangle
     private double side2;
     private double side3;
 
-    Soal1b_Triangle() {
-        side1 = side2 = side3 = 1.0;
+    Soal1b_Triangle(double side1, double side2, double side3, String color, boolean filled) {
+        this.side1 = this.side2 = this.side3 = 1.0;
     }
     Soal1b_Triangle(double side1, double side2, double side3) {
         this.side1 = side1;

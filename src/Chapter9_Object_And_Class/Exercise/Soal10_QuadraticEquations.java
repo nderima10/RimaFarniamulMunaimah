@@ -13,9 +13,9 @@ public class Soal10_QuadraticEquations {
 
         Soal10b quadratEquatio = new Soal10b(a,b,c);
 
-        System.out.println("The equation has ");
+        System.out.println("memiliki persamaan ");
         if (quadratEquatio.getDiscriminant() < 0)
-            System.out.println("No real roots");
+            System.out.println("Tidak ada akar nyata");
         else if (quadratEquatio.getDiscriminant() > 0) {
             System.out.println("two roots " + quadratEquatio.getRoot1() + " And " + quadratEquatio.getRoot2());
         }

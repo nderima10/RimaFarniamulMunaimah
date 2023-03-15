@@ -21,6 +21,6 @@ public class Soal11_AlebraLinearEquation {
         }
         else
 
-            System.out.println("The equation has no solution. ");
+            System.out.println("Persamaan tidak memiliki solusi. ");
     }
 }

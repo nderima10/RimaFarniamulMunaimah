@@ -11,11 +11,11 @@ public class Soal12_IntersectingPoint {
         Soal12b intersectingpoint = new Soal12b(p[0], p[1], p[2], p[3], p[4], p[5]);
 
         if (intersectingpoint.isSolvable()) {
-            System.out.println("The intersecting  point is at (" + intersectingpoint.getX() + ", " + intersectingpoint.getY() + ")");
+            System.out.println("Titik potongnya adalah di (" + intersectingpoint.getX() + ", " + intersectingpoint.getY() + ")");
         }
 
         else
-            System.out.println("The two lines are parallel");
+            System.out.println("Kedua garis itu sejajar");
     }
     public static double[][] getPoint() {
         Scanner input = new Scanner(System.in);

@@ -4,20 +4,20 @@ public class Listing1_TestSimpleCircle {
     public static void main(String[] args) {
         //create circle
         SimpleCircle circle1 = new SimpleCircle();
-        System.out.println("the area of the circle of radius "
+        System.out.println("luas lingkaran jari-jari "
                 + circle1.radius + " is " + circle1.getArea());
 
         SimpleCircle circle2 = new SimpleCircle(25);
-        System.out.println("the area of the circle of radius "
+        System.out.println("luas lingkaran jari-jari "
                 + circle2.radius + " is " + circle2.getArea());
 
         SimpleCircle circle3 = new SimpleCircle(125);
-        System.out.println("the area of the circle of radius "
+        System.out.println("luas lingkaran jari-jari "
                 + circle3.radius + " is " + circle3.getArea());
 
         //modif circle
         circle2.radius = 100;
-        System.out.println("The area of teh circle of radius " + circle2.radius + " is " + circle2.getArea());
+        System.out.println("Luas lingkaran jari-jari " + circle2.radius + " adalah " + circle2.getArea());
     }
 }
 class SimpleCircle {

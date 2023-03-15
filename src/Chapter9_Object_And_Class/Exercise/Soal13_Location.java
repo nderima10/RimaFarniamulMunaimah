@@ -6,7 +6,7 @@ public class Soal13_Location {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter the number of rows and columns in the array: ");
+        System.out.println("Masukkan jumlah baris dan kolom dalam array: ");
         int rows = input.nextInt();
         int columns = input.nextInt();
 
@@ -19,7 +19,7 @@ public class Soal13_Location {
         }
         Soal13b max = locationLarges(array);
 
-        System.out.println("The location of the largest element is " + max.maxValue + " at (" + max.row + ", " + max.column + ")");
+        System.out.println("Lokasi elemen terbesar adalah " + max.maxValue + " pada (" + max.row + ", " + max.column + ")");
     }
     public static Soal13b locationLarges(double[][] a) {
         return new Soal13b(a);

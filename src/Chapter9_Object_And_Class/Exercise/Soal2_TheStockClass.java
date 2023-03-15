@@ -8,7 +8,7 @@ public class Soal2_TheStockClass {
 
         System.out.println("\nStock name    : " + stock.name);
         System.out.println("\nStock symbol  : " + stock.Symbol);
-        System.out.printf("Price-change percentage: %.2f%%\n", stock.getChangePercent());
+        System.out.printf("Persentase perubahan harga: %.2f%%\n", stock.getChangePercent());
 
     }
 }
