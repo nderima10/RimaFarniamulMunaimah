@@ -11,7 +11,7 @@ public class Soal3_ArrayIndexOutOfBoundsException {
             System.out.println("Nilai elemen yang sesuai adalah:" + array[input.nextInt()]);
         }
         catch (ArrayIndexOutOfBoundsException ex) {
-            System.out.println("Di luar batas.");
+            System.err.println("Di luar batas!");
         }
     }
     public static int[] getArray() {
