@@ -1,4 +1,4 @@
-package Chapter12_ExceptionHandlingAndText_1or0.Exercise;
+package Chapter12_ExceptionHandlingAndText_1or0.Exercise.Soal_12_01;
 
 public class Soal1b_CalculatorWithoutException {
     public static void main(String[] args) throws Exception {

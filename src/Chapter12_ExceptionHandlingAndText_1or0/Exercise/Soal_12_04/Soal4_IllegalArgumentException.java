@@ -1,4 +1,4 @@
-package Chapter12_ExceptionHandlingAndText_1or0.Exercise;
+package Chapter12_ExceptionHandlingAndText_1or0.Exercise.Soal_12_04;
 
 import java.util.Scanner;
 
